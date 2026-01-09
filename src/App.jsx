@@ -1,21 +1,16 @@
-import React, { Component } from "react";
+import React, { useState } from "react";
 
-class App extends Component {
-    state = {
-        usuarios: ["Gabriel", "Vagner", "Michele"]
-    };
+const App = () => {
+    const [usuarios, setUsuarios] = useState(["Gabriel", "Vagner", "Michele"])
+    return(
+        <div className="App">
+            <h1>Hello DIO!</h1>
+            {usuarios.map((item) => (
+                <p>{item}</p>
+            ))}
+        </div>
+    )
 
-    render() {
-        const { usuarios } = this.state;
-        return(
-            <div className="App">
-                <h1>Hello DIO!</h1>
-                {usuarios.map((item) => (
-                    <p>{item}</p>
-                ))}
-            </div>
-        )
-    }
 }
 
 export default App;
