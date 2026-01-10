@@ -10,11 +10,16 @@ const App = () => {
         }, 3000);
     }, [])
 
+    const handleAddUser = () => {
+        setUsuarios([...usuarios, usuario])
+        setUsuario("")
+    }
+
     return (
         <div className="App">
             <h1>Hello DIO!</h1>
             <div>
-                <input value={usuario} onChangeText={(event) => setUsuario(event.target.value)}></input>
+                <input value={usuario} onChangeText={(event) => setUsuario(event.target.value)}/>
                 <button>Adicionar</button>
             </div>
             <hr/>
