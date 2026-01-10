@@ -19,8 +19,8 @@ const App = () => {
         <div className="App">
             <h1>Hello DIO!</h1>
             <div>
-                <input value={usuario} onChangeText={(event) => setUsuario(event.target.value)}/>
-                <button onClick={handleAddUser()}>Adicionar</button>
+                <input value={usuario} onChange={(event) => setUsuario(event.target.value)}/>
+                <button onClick={handleAddUser}>Adicionar</button>
             </div>
             <hr/>
             {usuarios.map((item) => (
