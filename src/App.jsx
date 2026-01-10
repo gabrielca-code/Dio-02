@@ -16,6 +16,10 @@ const App = () => {
         setUsuario("")
     }
 
+    useEffect(() => {
+        setCount(usuarios.length)
+    }, [usuarios])
+
     return (
         <div className="App">
             <h1>Hello DIO!</h1>
