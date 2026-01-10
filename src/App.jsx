@@ -20,7 +20,7 @@ const App = () => {
             <h1>Hello DIO!</h1>
             <div>
                 <input value={usuario} onChangeText={(event) => setUsuario(event.target.value)}/>
-                <button>Adicionar</button>
+                <button onClick={handleAddUser()}>Adicionar</button>
             </div>
             <hr/>
             {usuarios.map((item) => (
