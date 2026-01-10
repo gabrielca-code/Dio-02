@@ -12,6 +12,11 @@ const App = () => {
     return (
         <div className="App">
             <h1>Hello DIO!</h1>
+            <div>
+                <input value={usuario} onChange={(event) => setUsuario(event.target.value)}></input>
+                <button>Adicionar</button>
+            </div>
+            <hr/>
             {usuarios.map((item) => (
                 <p>{item}</p>
             ))}
