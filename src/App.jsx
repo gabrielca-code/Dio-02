@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 
 const App = () => {
+    const [usuario, setUsuario] = useState("")
     const [usuarios, setUsuarios] = useState(["Gabriel", "Vagner", "Michele"])
 
     useEffect(() => {
@@ -13,7 +14,7 @@ const App = () => {
         <div className="App">
             <h1>Hello DIO!</h1>
             <div>
-                <input value={usuario} onChange={(event) => setUsuario(event.target.value)}></input>
+                <input value={usuario} onChangeText={(event) => setUsuario(event.target.value)}></input>
                 <button>Adicionar</button>
             </div>
             <hr/>
