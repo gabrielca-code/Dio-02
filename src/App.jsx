@@ -11,14 +11,14 @@ const App = () => {
         }, 3000);
     }, [])
 
+    useEffect(() => {
+        setCount(usuarios.length)
+    }, [usuarios])
+
     const handleAddUser = () => {
         setUsuarios([...usuarios, usuario])
         setUsuario("")
     }
-
-    useEffect(() => {
-        setCount(usuarios.length)
-    }, [usuarios])
 
     return (
         <div className="App">
@@ -28,6 +28,7 @@ const App = () => {
                 <button onClick={handleAddUser}>Adicionar</button>
             </div>
             <hr/>
+            <h2>{count}</h2>
             {usuarios.map((item) => (
                 <p>{item}</p>
             ))}
