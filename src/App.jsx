@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 
 const App = () => {
     const [usuario, setUsuario] = useState("")
+    const [count, setCount] = useState()
     const [usuarios, setUsuarios] = useState(["Gabriel", "Vagner", "Michele"])
 
     useEffect(() => {
